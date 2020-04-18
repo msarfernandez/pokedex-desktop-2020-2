@@ -1,0 +1,5 @@
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Dominio\bin\Debug\Dominio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Dominio\bin\Debug\Dominio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Dominio\obj\Debug\Dominio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Dominio\obj\Debug\Dominio.pdb

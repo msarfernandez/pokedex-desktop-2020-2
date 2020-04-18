@@ -1,0 +1,54 @@
+
+use master
+go
+create database POKEMON_DB
+go
+use POKEMON_DB
+go
+USE [POKEMON_DB]
+GO
+
+/****** Object:  Table [dbo].[POKEMONS]    Script Date: 4/11/2020 5:13:54 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[POKEMONS](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [varchar](30) NULL,
+	[Numero] [int] NULL,
+	[IdEvolucion] [int] NULL,
+	[Descripcion] [varchar](300) NULL,
+	[Imagen] [varchar](500) NULL,
+	[IdTipo] [int] NULL,
+ CONSTRAINT [PK_POKEMONS] PRIMARY KEY CLUSTERED 
+(
+
+GO
+
+CREATE TABLE [dbo].[TIPOS](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Descripcion] [varchar](30) NULL,
+ CONSTRAINT [PK_TIPOS] PRIMARY KEY CLUSTERED 
+(
+
+GO
+
+insert into tipos values ('Agua')
+insert into tipos values ('Fuego')
+insert into tipos values ('Planta')
+insert into tipos values ('Fantasma')
+insert into tipos values ('Psiquico')
+
+insert into pokemons values ('Bulbasaur', 1, 2, 'A Bulbasaur es fácil verle echándose una siesta al sol. La semilla que tiene en el lomo va creciendo cada vez más a medida que absorbe los rayos del sol.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png', 3)
+insert into pokemons values ('Ivysaur', 2, 3, 'Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png', 3)
+insert into pokemons values ('Venusaur', 3, 0, 'Venusaur tiene una flor enorme en el lomo que, según parece, adquiere unos colores muy vivos si está bien nutrido y le da mucho el sol.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png', 3)
+insert into pokemons values ('Charmander', 4, 5, 'La llama que tiene en la punta de la cola arde según sus sentimientos.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png', 2)
+insert into pokemons values ('Charmeleon', 5, 6, 'Charmeleon no tiene reparo en acabar con su rival usando las afiladas garras que tiene.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png', 2)
+insert into pokemons values ('Charizard', 6, 0, 'Charizard se dedica a volar por los cielos en busca de oponentes fuertes.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png', 2)
+insert into pokemons values ('Squirtle', 7, 8, 'El caparazón de Squirtle no le sirve de protección únicamente.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png', 1)
+insert into pokemons values ('Wartortle', 8, 9, 'Tiene una cola larga y cubierta de un pelo abundante y grueso que se torna más oscuro a medida que crece.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png', 1)
+insert into pokemons values ('Blastoise', 9, 0, 'Blastoise lanza chorros de agua con gran precisión por los tubos que le salen del caparazón que tiene en la espalda.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png', 1)
+

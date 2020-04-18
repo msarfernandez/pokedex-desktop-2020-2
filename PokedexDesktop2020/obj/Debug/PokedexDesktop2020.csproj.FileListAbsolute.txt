@@ -1,0 +1,15 @@
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\PokedexDesktop2020.exe.config
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\PokedexDesktop2020.exe
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\PokedexDesktop2020.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.csprojAssemblyReference.cache
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.Form1.resources
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.Properties.Resources.resources
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.csproj.GenerateResource.cache
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.exe
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\Dominio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\Negocio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\Dominio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\Negocio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.csproj.CopyComplete
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.frmAltaPokemon.resources

@@ -1,0 +1,8 @@
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\bin\Debug\Negocio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\bin\Debug\Negocio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\bin\Debug\Dominio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\bin\Debug\Dominio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.dll
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.pdb
