@@ -6,3 +6,4 @@ C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.dll
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.pdb
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache

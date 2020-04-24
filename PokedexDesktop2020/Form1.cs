@@ -60,5 +60,13 @@ namespace PokedexDesktop2020
             alta.ShowDialog();
             cargarGrilla();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Pokemon modi = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+            frmAltaPokemon alta = new frmAltaPokemon(modi);
+            alta.ShowDialog();
+            cargarGrilla();
+        }
     }
 }

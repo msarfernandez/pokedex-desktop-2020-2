@@ -13,3 +13,4 @@ C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\De
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\bin\Debug\Negocio.pdb
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.csproj.CopyComplete
 C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.frmAltaPokemon.resources
+C:\Users\msarfernandez\source\repos\PokedexDesktop2020\PokedexDesktop2020\obj\Debug\PokedexDesktop2020.csproj.CoreCompileInputs.cache

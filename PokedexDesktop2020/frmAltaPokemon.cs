@@ -14,9 +14,15 @@ namespace PokedexDesktop2020
 {
     public partial class frmAltaPokemon : Form
     {
+        private Pokemon pokemon = null;
         public frmAltaPokemon()
         {
             InitializeComponent();
+        }
+        public frmAltaPokemon(Pokemon poke)
+        {
+            InitializeComponent();
+            pokemon = poke;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,15 +32,21 @@ namespace PokedexDesktop2020
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Pokemon nuevo = new Pokemon();
             PokemonNegocio negocio = new PokemonNegocio();
             try
             {
-                nuevo.Nombre = txtNombre.Text.Trim();
-                nuevo.ImagenURL = txtUrlImagen.Text.Trim();
-                nuevo.Tipo = (Tipo)cboTipo.SelectedItem;
+                if (pokemon == null)
+                    pokemon = new Pokemon();
 
-                negocio.agregar(nuevo);
+                pokemon.Nombre = txtNombre.Text.Trim();
+                pokemon.ImagenURL = txtUrlImagen.Text.Trim();
+                pokemon.Tipo = (Tipo)cboTipo.SelectedItem;
+                // pokemon.Precio = double.Parse(txtPrecio.Text);
+
+                if (pokemon.Id == null)
+                    negocio.agregar(pokemon);
+                else
+                    negocio.modificar(pokemon);
 
                 Dispose();
             }
@@ -50,6 +62,15 @@ namespace PokedexDesktop2020
             try
             {
                 cboTipo.DataSource = tipo.listar();
+                cboTipo.DisplayMember = "Descripcion";
+                cboTipo.ValueMember = "Id";
+
+
+                if(pokemon != null)
+                {
+                    txtNombre.Text = pokemon.Nombre;
+                    cboTipo.SelectedValue = pokemon.Tipo.Id;
+                }
             }
             catch (Exception ex)
             {

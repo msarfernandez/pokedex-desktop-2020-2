@@ -21,7 +21,7 @@ namespace Negocio
             {
                 conexion.ConnectionString = "data source=MAXIMILIANO8285\\SQLEXPRESS; initial catalog=POKEMON_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Nombre, Numero, Imagen from POKEMONS";
+                comando.CommandText = "select P.Id as IdPoke, P.Nombre, P.Numero, P.Imagen, T.Id,T.Descripcion from POKEMONS P, TIPOS T Where P.IdTipo=T.Id";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
@@ -29,12 +29,17 @@ namespace Negocio
                 {
                     Pokemon aux = new Pokemon();
                     //aux.Nombre = (string)lector["Nombre"];
-                    aux.Nombre = lector.GetString(0);
+                    aux.Nombre = lector.GetString(1);
 
                     if (!Convert.IsDBNull(lector["Numero"]))
-                        aux.Numero = lector.GetInt32(1);
+                        aux.Numero = lector.GetInt32(2);
 
-                    aux.ImagenURL = (string)lector[2];
+                    aux.ImagenURL = (string)lector[3];
+
+                    aux.Tipo = new Tipo();
+                    aux.Tipo.Id = (int)lector["Id"];
+                    aux.Id = (int)lector["IdPoke"];
+                    aux.Tipo.Descripcion = (string)lector["Descripcion"];
 
                     listado.Add(aux);
                 }
@@ -65,10 +70,11 @@ namespace Negocio
             {
                 conexion.ConnectionString = "data source=MAXIMILIANO8285\\SQLEXPRESS; initial catalog=POKEMON_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "insert into POKEMONS (Nombre, Imagen, IdTipo) Values ('" + nuevo.Nombre + "', @Imagen, @IdTipo)";
+                comando.CommandText = "insert into POKEMONS (Nombre, Imagen, IdTipo, Precio) Values ('" + nuevo.Nombre + "', @Imagen, @IdTipo, @Precio)";
                 // comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@Imagen", nuevo.ImagenURL);
-                comando.Parameters.AddWithValue("@IdTipo", nuevo.Tipo.Id.ToString());
+                comando.Parameters.AddWithValue("@IdTipo", nuevo.Tipo.Id);
+                comando.Parameters.AddWithValue("@Precio", nuevo.Precio);
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -84,5 +90,39 @@ namespace Negocio
                 conexion.Close();
             }
         }
+
+        public void modificar(Pokemon nuevo)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "data source=MAXIMILIANO8285\\SQLEXPRESS; initial catalog=POKEMON_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "update POKEMONS set Nombre = @Nombre, Imagen = @Imagen, IdTipo = @IdTipo, Precio = @Precio Where Id=@Id";
+                // comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@Nombre", nuevo.Nombre);
+                comando.Parameters.AddWithValue("@Imagen", nuevo.ImagenURL);
+                comando.Parameters.AddWithValue("@IdTipo", nuevo.Tipo.Id);
+                comando.Parameters.AddWithValue("@Precio", nuevo.Precio);
+                comando.Parameters.AddWithValue("@Id", nuevo.Id);
+
+                comando.Connection = conexion;
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
     }
 }
