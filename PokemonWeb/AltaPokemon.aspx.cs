@@ -11,7 +11,14 @@ namespace PokemonWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // txtEmail.Text = "pokemon@utn.com";
+        }
 
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+            Session.Add(Session.SessionID + "nombreBienvenida", txtEmail.Text);
+            Response.Redirect("Bienvenida.aspx");
         }
     }
 }
